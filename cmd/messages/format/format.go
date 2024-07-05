@@ -29,7 +29,7 @@ func run(cmd *cobra.Command, args []string) (err error) {
 		fileName = args[0]
 	}
 
-	msgs, err := messages.LoadMap(fileName)
+	msgs, err := messages.LoadMapFile(fileName)
 	if err != nil {
 		return
 	}

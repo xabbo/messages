@@ -125,18 +125,22 @@ func (msgs MessageMap) All(dir Direction) []*MsgMapEntry {
 	return slice
 }
 
-// LoadMap loads a message map from the specified file.
-func LoadMap(name string) (msgs MessageMap, err error) {
+// LoadMapFile loads a message map from the specified file.
+func LoadMapFile(name string) (msgs MessageMap, err error) {
 	f, err := os.Open(name)
 	if err != nil {
 		return
 	}
 	defer f.Close()
+	return LoadMap(f)
+}
 
+// LoadMap loads a message map from the specified io.Reader.
+func LoadMap(r io.Reader) (msgs MessageMap, err error) {
 	msgs = NewMessageMap()
 
 	dir := Direction(-1)
-	sc := bufio.NewScanner(f)
+	sc := bufio.NewScanner(r)
 
 	ln := 0
 	for sc.Scan() {

@@ -48,7 +48,7 @@ func run(cmd *cobra.Command, args []string) (err error) {
 		msgs = messages.NewMessageMap()
 		err = nil
 	} else {
-		msgs, err = messages.LoadMap(fileName)
+		msgs, err = messages.LoadMapFile(fileName)
 		if err != nil {
 			return
 		}
