@@ -14,7 +14,7 @@ type MsgMapEntry struct {
 }
 
 // Merge merges message names from `other` into this instance.
-// It returns an error if there is a conflict.
+// It returns a MergeConflict if there is a conflict.
 func (dst *MsgMapEntry) Merge(src *MsgMapEntry) (op MergeOp) {
 	op.Src = src
 	op.Dst = dst
@@ -28,6 +28,9 @@ func (dst *MsgMapEntry) Merge(src *MsgMapEntry) (op MergeOp) {
 		case MergeOk:
 			op.Result = MergeOk
 		}
+	}
+	if op.Result != MergeConflict {
+		dst.Comment = mergeComments(dst.Comment, src.Comment)
 	}
 	return
 }
@@ -48,6 +51,23 @@ func mergeMsgName(dst, src *string) MergeResult {
 		*dst = *src
 		return MergeOk
 	}
+}
+
+func mergeComments(dst, src string) string {
+	dst = formatComment(dst)
+	src = formatComment(src)
+	if dst != "" && src != "" && !strings.EqualFold(dst, src) {
+		dst += " " + src
+	}
+	return dst
+}
+
+func formatComment(comment string) string {
+	comment = strings.TrimSpace(comment)
+	if comment != "" && !strings.HasSuffix(comment, ".") {
+		comment += "."
+	}
+	return comment
 }
 
 func (res MergeResult) String() string {
@@ -131,14 +151,13 @@ func (entry *MsgMapEntry) Parse(s string) (err error) {
 	}
 
 	if len(commentSplit) >= 2 {
-		entry.Comment = strings.TrimSpace(commentSplit[1])
+		entry.Comment = formatComment(commentSplit[1])
 	}
-
 	return
 }
 
 // String formats the message map entry to a string.
-func (names *MsgMapEntry) String() (result string) {
+func (entry *MsgMapEntry) String() (result string) {
 	var fields []string
 	processed := Client(0)
 
@@ -147,7 +166,7 @@ func (names *MsgMapEntry) String() (result string) {
 			continue
 		}
 		processed |= Clients[i]
-		name := names.Get(Clients[i])
+		name := entry.Get(Clients[i])
 		if name == "" {
 			continue
 		}
@@ -156,7 +175,7 @@ func (names *MsgMapEntry) String() (result string) {
 			if processed&Clients[j] > 0 {
 				continue
 			}
-			if strings.EqualFold(names.Get(Clients[j]), name) {
+			if strings.EqualFold(entry.Get(Clients[j]), name) {
 				identifier += string(Clients[j].Rune())
 				processed |= Clients[j]
 			}
@@ -164,11 +183,14 @@ func (names *MsgMapEntry) String() (result string) {
 		fields = append(fields, identifier+":"+name)
 	}
 
-	for _, noMerge := range names.NoMerge {
+	for _, noMerge := range entry.NoMerge {
 		fields = append(fields, "!"+string(noMerge.Client.Rune())+":"+noMerge.Name)
 	}
 
 	result = strings.Join(fields, " ")
+	if entry.Comment != "" {
+		result += " ; " + entry.Comment
+	}
 	return
 }
 
