@@ -56,8 +56,11 @@ func mergeMsgName(dst, src *string) MergeResult {
 func mergeComments(dst, src string) string {
 	dst = formatComment(dst)
 	src = formatComment(src)
-	if dst != "" && src != "" && !strings.EqualFold(dst, src) {
-		dst += " " + src
+	if src != "" && !strings.EqualFold(dst, src) {
+		if dst != "" {
+			dst += " "
+		}
+		dst += src
 	}
 	return dst
 }
