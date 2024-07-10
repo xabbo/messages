@@ -3,7 +3,12 @@ package messages
 import (
 	"fmt"
 	"strings"
+
+	"golang.org/x/text/collate"
+	"golang.org/x/text/language"
 )
+
+var collateIgnoreCase = collate.New(language.English, collate.IgnoreCase)
 
 // MsgMapEntry defines an entry in a message map.
 // A name for each client may be defined, as well as multiple no-merge directives, and an end-of-line comment.
@@ -241,7 +246,7 @@ func (names *MsgMapEntry) Set(client Client, name string) {
 
 // CompareMsgs compares message map entries based on their name.
 func CompareMsgs(a, b MsgMapEntry) int {
-	return strings.Compare(a.Name(), b.Name())
+	return collateIgnoreCase.Compare([]byte(a.Name()), []byte(b.Name()))
 }
 
 // Name returns the first non-empty message name in the order of [Clients].
