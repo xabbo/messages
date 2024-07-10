@@ -10,7 +10,7 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	root "xabbo.b7c.io/messages/cmd/messages"
+	root "xabbo.b7c.io/messages/cli/msgs/cmds"
 	"xabbo.b7c.io/messages/pkg/messages"
 	"xabbo.b7c.io/messages/pkg/sulek"
 )
