@@ -2,6 +2,7 @@ package messages
 
 import (
 	"fmt"
+	"regexp"
 	"strings"
 
 	"golang.org/x/text/collate"
@@ -9,6 +10,8 @@ import (
 )
 
 var collateIgnoreCase = collate.New(language.English, collate.IgnoreCase)
+
+var rgxValidIdentifier = regexp.MustCompile(`(?i)^[a-z][a-z0-9_]*$`)
 
 // MsgMapEntry defines an entry in a message map.
 // A name for each client may be defined, as well as multiple no-merge directives, and an end-of-line comment.
@@ -129,6 +132,7 @@ func (entry *MsgMapEntry) Parse(s string) (err error) {
 
 	var processed Client
 
+	nIdentifiers := 0
 	fields := strings.Fields(commentSplit[0])
 	for _, field := range fields {
 		field, noMerge := strings.CutPrefix(field, "!")
@@ -139,10 +143,27 @@ func (entry *MsgMapEntry) Parse(s string) (err error) {
 		}
 
 		clientRunes, name := split[0], split[1]
+		if name == "" {
+			err = fmt.Errorf("empty identifier")
+			return
+		} else if name != "-" && !rgxValidIdentifier.MatchString(name) {
+			err = fmt.Errorf("invalid identifier: %q", name)
+			return
+		}
+
+		if name != "-" {
+			nIdentifiers++
+		}
+
+		if noMerge && name == "-" {
+			err = fmt.Errorf("no merge (!) cannot be specified on blank identifier (-)")
+			return
+		}
+
 		for _, r := range clientRunes {
 			var client Client
 			if !client.FromRune(r) {
-				err = fmt.Errorf("unknown client char: %c", r)
+				err = fmt.Errorf("invalid client character %q", r)
 				return
 			}
 			if noMerge {
@@ -150,12 +171,17 @@ func (entry *MsgMapEntry) Parse(s string) (err error) {
 				continue
 			}
 			if processed&client > 0 {
-				err = fmt.Errorf("duplicate client char: %c", r)
+				err = fmt.Errorf("duplicate client character %q", r)
 				return
 			}
 			processed |= client
 			entry.Set(client, name)
 		}
+	}
+
+	if nIdentifiers == 0 {
+		err = fmt.Errorf("at least one identifier must be specified")
+		return
 	}
 
 	if len(commentSplit) >= 2 {

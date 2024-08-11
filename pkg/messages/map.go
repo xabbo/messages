@@ -61,7 +61,7 @@ func (msgMap MessageMap) AddOrMerge(dir Direction, src *MsgMapEntry) (op MergeOp
 	// loop over src names
 	for _, srcClient := range Clients {
 		srcName := src.Get(srcClient)
-		if srcName == "" {
+		if srcName == "" || srcName == "-" {
 			continue
 		}
 		// loop over clients to search keys

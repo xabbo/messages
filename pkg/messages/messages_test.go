@@ -23,7 +23,12 @@ func TestFormat(t *testing.T) {
 		r := strings.NewReader(input)
 		msgs, err := LoadMap(r)
 		if err != nil {
+			if expected == "ERROR" {
+				continue
+			}
 			t.Fatal(err)
+		} else if expected == "ERROR" {
+			t.Fatal("expected error did not occur")
 		}
 		w := &bytes.Buffer{}
 		msgs.Write(w)
