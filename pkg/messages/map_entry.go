@@ -179,6 +179,11 @@ func (entry *MsgMapEntry) Parse(s string) (err error) {
 		}
 	}
 
+	if processed == 0 {
+		err = fmt.Errorf("at least one client must be specified")
+		return
+	}
+
 	if nIdentifiers == 0 {
 		err = fmt.Errorf("at least one identifier must be specified")
 		return
