@@ -10,9 +10,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
+	"xabbo.b7c.io/messages/cli/internal/messages"
+	"xabbo.b7c.io/messages/cli/internal/sulek"
 	root "xabbo.b7c.io/messages/cli/msgs/cmds"
-	"xabbo.b7c.io/messages/pkg/messages"
-	"xabbo.b7c.io/messages/pkg/sulek"
 )
 
 var updateCmd = &cobra.Command{

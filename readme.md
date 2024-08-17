@@ -2,6 +2,8 @@
 
 Provides a mapping for message names between different Habbo clients.
 
+The `cli` directory contains the command-line tool used to update and format the message map file.
+
 ## Specification
 
 All entries must come under an `[Incoming]` or `[Outgoing]` section.
