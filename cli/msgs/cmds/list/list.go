@@ -13,10 +13,9 @@ import (
 )
 
 var listCmd = &cobra.Command{
-	Use:                   "list <direction> <variant> [-r release]",
-	DisableFlagsInUseLine: true,
-	Args:                  cobra.ExactArgs(2),
-	RunE:                  run,
+	Use:  "list",
+	Args: cobra.NoArgs,
+	RunE: run,
 }
 
 var opts struct {
@@ -43,25 +42,30 @@ func run(cmd *cobra.Command, args []string) (err error) {
 	cmd.SilenceUsage = true
 
 	var directions []messages.Direction
-	switch args[0] {
+	if opts.direction == "" {
+		return fmt.Errorf("no direction specified")
+	}
+	switch opts.direction {
 	case "in":
 		directions = []messages.Direction{messages.In}
 	case "out":
-		directions = []messages.Direction{messages.In}
+		directions = []messages.Direction{messages.Out}
 	case "both":
 		directions = []messages.Direction{messages.In, messages.Out}
 	default:
-		return fmt.Errorf("invalid direction: %s", args[0])
+		return fmt.Errorf("invalid direction: %s", opts.direction)
 	}
 
 	var sulekMessages sulek.Messages
 	if opts.extract {
-		err = json.NewDecoder(cmd.InOrStdin()).Decode(&sulekMessages)
+		var container sulek.MessagesContainer
+		err = json.NewDecoder(cmd.InOrStdin()).Decode(&container)
 		if err != nil {
 			return
 		}
+		sulekMessages = container.Messages
 	} else {
-		variant := args[1]
+		variant := opts.variant
 		version := opts.release
 
 		if version == "" {
