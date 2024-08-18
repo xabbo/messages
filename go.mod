@@ -1,4 +1,4 @@
-module xabbo.b7c.io/messages/cli
+module xabbo.b7c.io/messages
 
 go 1.22.4
 
