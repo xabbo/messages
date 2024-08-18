@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <XabboCommonDir Condition="$(XabboCommonDir) == ''">../../lib/common/</XabboCommonDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(XabboCommonDir)src/Xabbo.Common/Xabbo.Common.csproj" />
+  </ItemGroup>
+
+</Project>
