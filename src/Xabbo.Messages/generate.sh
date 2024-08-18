@@ -18,7 +18,8 @@ output() {
         out) direction=outgoing ;;
     esac
 
-    identifiers=$(jq -r '.messages.'$direction'[] | "    public static readonly Identifier \(.name) = _();"' | sort) || fatal
+    # identifiers=$(jq -r '.messages.'$direction'[] | "    public static readonly Identifier \(.name) = _();"' | sort) || fatal
+    identifiers=$( while read name; do echo "    public static readonly Identifier ${name} = _();"; done )
     generated="Generated for the ${client^} client version ${version}"
 
     cat << EOF
@@ -58,7 +59,7 @@ generate() {
 
     mkdir -p "${client^}"
     for dir in {in,out}; do
-        echo "$messages" | output "$client" "$dir" "$release" > "${client^}/${dir^}.cs"
+        echo "$messages" | go run ../../cli/msgs list -x -d $dir | output "$client" "$dir" "$release" > "${client^}/${dir^}.cs"
     done
 }
 
