@@ -7,6 +7,7 @@ import (
 
 	root "xabbo.b7c.io/messages/cli/msgs/cmds"
 	_ "xabbo.b7c.io/messages/cli/msgs/cmds/format"
+	_ "xabbo.b7c.io/messages/cli/msgs/cmds/list"
 	_ "xabbo.b7c.io/messages/cli/msgs/cmds/update"
 )
 
