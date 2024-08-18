@@ -1,6 +1,10 @@
 package cmds
 
-import "github.com/spf13/cobra"
+import (
+	"os"
+
+	"github.com/spf13/cobra"
+)
 
 var rootCmd = &cobra.Command{
 	Use:           "messages",
@@ -16,5 +20,7 @@ func AddCommand(cmd *cobra.Command) {
 }
 
 func Execute() error {
+	rootCmd.SetOut(os.Stdout)
+	rootCmd.SetErr(os.Stderr)
 	return rootCmd.Execute()
 }
