@@ -2,12 +2,45 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Xabbo.Messages</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <DebugType>embedded</DebugType>
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageId>Xabbo.Messages</PackageId>
+    <PackageProjectUrl>https://xabbo.b7c.io/messages</PackageProjectUrl>
+    <Description>Provides message identifiers for use with Xabbo.</Description>
+    <RepositoryUrl>https://github.com/xabbo/messages.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <Authors>xabbo</Authors>
+    <Copyright>Copyright (c) xabbo 2024</Copyright>
+    <PackageTags>xabbo;habbo</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup Label="Include package icon">
+    <None Include="..\..\res\xabbo-skull-128.png" Pack="true" PackagePath="icon.png" />
+  </ItemGroup>
+
+  <PropertyGroup Label="Rename paths">
+    <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
+    <PathMap>$(AppOutputBase)=Xabbo.Messages\</PathMap>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Include documentation">
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Project import paths">
     <XabboCommonDir Condition="$(XabboCommonDir) == ''">../../lib/common/</XabboCommonDir>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GitVersion.MsBuild" Version="6.0.2" PrivateAssets="all" />
     <ProjectReference Include="$(XabboCommonDir)src/Xabbo.Common/Xabbo.Common.csproj" />
   </ItemGroup>
 
