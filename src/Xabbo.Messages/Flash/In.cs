@@ -13,6 +13,9 @@ public static class In {
         ArgumentNullException.ThrowIfNull(name, nameof(name));
         return new Identifier(ClientType.Flash, Direction.In, name);
     }
+
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
     public static readonly Identifier AcceptFriendResult = _();
     public static readonly Identifier AccountPreferences = _();
     public static readonly Identifier AccountSafetyLockStatusChange = _();
@@ -512,4 +515,6 @@ public static class In {
     public static readonly Identifier YoutubeControlVideo = _();
     public static readonly Identifier YoutubeDisplayPlaylists = _();
     public static readonly Identifier YoutubeDisplayVideo = _();
+
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }

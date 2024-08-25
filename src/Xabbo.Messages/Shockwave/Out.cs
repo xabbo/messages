@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 33 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 35 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 33 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 35 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class Out {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -13,6 +13,9 @@ public static class Out {
         ArgumentNullException.ThrowIfNull(name, nameof(name));
         return new Identifier(ClientType.Shockwave, Direction.Out, name);
     }
+
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
     public static readonly Identifier AC = _();
     public static readonly Identifier ACTIVATE_AVATAR_EFFECT = _();
     public static readonly Identifier ADDSTRIPITEM = _();
@@ -212,4 +215,6 @@ public static class Out {
     public static readonly Identifier WATCHGAME = _();
     public static readonly Identifier WAVE = _();
     public static readonly Identifier WHISPER = _();
+
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }

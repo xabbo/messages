@@ -13,6 +13,9 @@ public static class Out {
         ArgumentNullException.ThrowIfNull(name, nameof(name));
         return new Identifier(ClientType.Flash, Direction.Out, name);
     }
+
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
     public static readonly Identifier AcceptFriend = _();
     public static readonly Identifier AcceptQuest = _();
     public static readonly Identifier AcceptTrading = _();
@@ -502,4 +505,6 @@ public static class Out {
     public static readonly Identifier WiredSetPreferences = _();
     public static readonly Identifier WiredSetRoomSettings = _();
     public static readonly Identifier WithdrawCreditVault = _();
+
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }

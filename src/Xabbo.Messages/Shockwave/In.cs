@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 33 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 35 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 33 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 35 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class In {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -13,6 +13,9 @@ public static class In {
         ArgumentNullException.ThrowIfNull(name, nameof(name));
         return new Identifier(ClientType.Shockwave, Direction.In, name);
     }
+
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
     public static readonly Identifier ACR = _();
     public static readonly Identifier ACTIVEOBJECTS = _();
     public static readonly Identifier ACTIVEOBJECT_ADD = _();
@@ -225,4 +228,6 @@ public static class In {
     public static readonly Identifier YOUARENOTALLOWED = _();
     public static readonly Identifier YOUARENOTSPECTATOR = _();
     public static readonly Identifier YOUARESPECTATOR = _();
+
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }
