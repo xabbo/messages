@@ -10,14 +10,6 @@ tasks:
     dir: ./src/Xabbo.Messages
     cmds:
       - ./generate.sh
-  build:cli:
-    cmds:
-      - go build -v -o ./bin/ ./cli/msgs
-  build:lib:
-    cmds:
-      - dotnet build
-  build:
-    deps: [build:cli, build:lib]
   test:cli:
     cmds:
       - go test ./cli/...
@@ -27,8 +19,19 @@ tasks:
       - dotnet test --no-build
   test:
     deps: [test:cli, test:lib]
+  build:cli:
+    cmds:
+      - go build -v -o ./bin/ ./cli/msgs
+  build:lib:
+    cmds:
+      - dotnet build
+  build:
+    deps: [build:cli, build:lib]
   rebuild:
     cmds:
       - dotnet clean
       - dotnet build-server shutdown
       - dotnet build
+  pack:
+    cmds:
+      - dotnet pack src/Xabbo.Messages -c Release -o pkg
