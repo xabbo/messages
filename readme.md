@@ -1,3 +1,6 @@
+![NuGet Version](https://img.shields.io/nuget/v/Xabbo.Messages?style=for-the-badge)
+![NuGet Downloads](https://img.shields.io/nuget/dt/Xabbo.Messages?style=for-the-badge)
+
 # xabbo/messages
 
 Provides a mapping for message names between different Habbo clients.
