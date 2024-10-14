@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 35 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 42 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 35 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 42 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class In {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -107,10 +107,18 @@ public static class In {
     public static readonly Identifier HOTEL_LOGOUT = _();
     public static readonly Identifier IDATA = _();
     public static readonly Identifier INTERSTITIALDATA = _();
+    public static readonly Identifier INVALID_SONG_LENGTH = _();
+    public static readonly Identifier INVALID_SONG_NAME = _();
+    public static readonly Identifier INVITATION = _();
+    public static readonly Identifier INVITATION_EXPIRED = _();
+    public static readonly Identifier INVITATION_FOLLOW_FAILED = _();
     public static readonly Identifier IN_ARENA_QUEUE = _();
     public static readonly Identifier ITEMS = _();
     public static readonly Identifier ITEMS_2 = _();
     public static readonly Identifier JOIN_FAILED = _();
+    public static readonly Identifier JUKEBOX_DISKS = _();
+    public static readonly Identifier JUKEBOX_PLAYLIST_FULL = _();
+    public static readonly Identifier JUKEBOX_SONG_ADDED = _();
     public static readonly Identifier JUMPDATA = _();
     public static readonly Identifier JUMPINGPLACE_OK = _();
     public static readonly Identifier JUMPLIFTDOOR_CLOSE = _();
@@ -119,16 +127,19 @@ public static class In {
     public static readonly Identifier LOAD_STAGE = _();
     public static readonly Identifier LOGIN_OK = _();
     public static readonly Identifier LOGOUT = _();
+    public static readonly Identifier MACHINE_SOUND_PACKAGES = _();
     public static readonly Identifier MAIL_COUNT_NOTIFICATION = _();
     public static readonly Identifier MAIL_NOTIFICATION = _();
     public static readonly Identifier MD_EXIT = _();
     public static readonly Identifier MEMBERINFO = _();
     public static readonly Identifier MESSENGER_ERROR = _();
+    public static readonly Identifier MESSENGER_MESSAGE = _();
     public static readonly Identifier MESSENGER_MESSAGES = _();
     public static readonly Identifier MOD_ALERT = _();
     public static readonly Identifier MYPERSISTENTMESSAGE = _();
     public static readonly Identifier NAMEUNACCEPTABLE = _();
     public static readonly Identifier NAVNODEINFO = _();
+    public static readonly Identifier NEW_SONG = _();
     public static readonly Identifier NOFLATS = _();
     public static readonly Identifier NOFLATSFORUSER = _();
     public static readonly Identifier NOTICKETS = _();
@@ -146,6 +157,8 @@ public static class In {
     public static readonly Identifier PICKED_CRY = _();
     public static readonly Identifier PING = _();
     public static readonly Identifier PLAYER_EXITED_GAME_ARENA = _();
+    public static readonly Identifier PLAY_LIST = _();
+    public static readonly Identifier PLAY_LIST_INVALID = _();
     public static readonly Identifier POLL_CONTENTS = _();
     public static readonly Identifier POLL_ERROR = _();
     public static readonly Identifier POLL_OFFER = _();
@@ -185,6 +198,12 @@ public static class In {
     public static readonly Identifier SESSION_PARAMETERS = _();
     public static readonly Identifier SHOWPROGRAM = _();
     public static readonly Identifier SLIDEOBJECTBUNDLE = _();
+    public static readonly Identifier SONG_INFO = _();
+    public static readonly Identifier SONG_LIST = _();
+    public static readonly Identifier SONG_LIST_FULL = _();
+    public static readonly Identifier SONG_LOCKED = _();
+    public static readonly Identifier SONG_MISSING_PACKAGES = _();
+    public static readonly Identifier SONG_SAVED = _();
     public static readonly Identifier SOUND_SETTING = _();
     public static readonly Identifier SPACENODEUSERS = _();
     public static readonly Identifier STAGE_ENDING = _();
@@ -219,6 +238,8 @@ public static class In {
     public static readonly Identifier USER_JOINED_GAME = _();
     public static readonly Identifier USER_LEFT_GAME = _();
     public static readonly Identifier USER_OBJ = _();
+    public static readonly Identifier USER_SONG_DISKS = _();
+    public static readonly Identifier USER_SOUND_PACKAGES = _();
     public static readonly Identifier VOTES_CLOSE = _();
     public static readonly Identifier VOTE_QUESTION = _();
     public static readonly Identifier VOTE_RESULTS = _();

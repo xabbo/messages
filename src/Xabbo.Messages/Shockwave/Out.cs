@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 35 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 42 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 35 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 42 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class Out {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -20,17 +20,19 @@ public static class Out {
     public static readonly Identifier ACTIVATE_AVATAR_EFFECT = _();
     public static readonly Identifier ADDSTRIPITEM = _();
     public static readonly Identifier ADD_FAVORITE_ROOM = _();
+    public static readonly Identifier ADD_JUKEBOX_DISC = _();
     public static readonly Identifier APPROVEEMAIL = _();
     public static readonly Identifier APPROVE_PASSWORD = _();
     public static readonly Identifier APPROVE_PET_NAME = _();
     public static readonly Identifier ASSIGNRIGHTS = _();
     public static readonly Identifier BTCKS = _();
+    public static readonly Identifier BURN_SONG = _();
     public static readonly Identifier CARRYDRINK = _();
     public static readonly Identifier CARRYITEM = _();
-    public static readonly Identifier CHANGECALLCATEGORY = _();
     public static readonly Identifier CHANGESHRT = _();
     public static readonly Identifier CHANGEWORLD = _();
     public static readonly Identifier CHAT = _();
+    public static readonly Identifier CLOSE_CALL = _();
     public static readonly Identifier CLOSE_UIMAKOPPI = _();
     public static readonly Identifier COPPA_REG_CHECKTIME = _();
     public static readonly Identifier COPPA_REG_GETREALTIME = _();
@@ -40,9 +42,12 @@ public static class Out {
     public static readonly Identifier DELETEFLAT = _();
     public static readonly Identifier DELETEGAME = _();
     public static readonly Identifier DELETE_PENDING_CALLS_FOR_HELP = _();
+    public static readonly Identifier DELETE_SONG = _();
     public static readonly Identifier DEL_FAVORITE_ROOM = _();
     public static readonly Identifier DICE_OFF = _();
     public static readonly Identifier DOORGOIN = _();
+    public static readonly Identifier EDIT_SONG = _();
+    public static readonly Identifier EJECT_SOUND_PACKAGE = _();
     public static readonly Identifier ENTER_ONEWAY_DOOR = _();
     public static readonly Identifier FLATPROPBYITEM = _();
     public static readonly Identifier FOLLOW_FRIEND = _();
@@ -80,12 +85,17 @@ public static class Out {
     public static readonly Identifier GET_CFH_CATEGORIES = _();
     public static readonly Identifier GET_CREDITS = _();
     public static readonly Identifier GET_FURNI_REVISIONS = _();
+    public static readonly Identifier GET_JUKEBOX_DISCS = _();
     public static readonly Identifier GET_PASSWORD = _();
     public static readonly Identifier GET_PENDING_CALLS_FOR_HELP = _();
+    public static readonly Identifier GET_PLAY_LIST = _();
     public static readonly Identifier GET_RECYCLER_PRIZES = _();
     public static readonly Identifier GET_RECYCLER_STATUS = _();
     public static readonly Identifier GET_SESSION_PARAMETERS = _();
+    public static readonly Identifier GET_SONG_INFO = _();
+    public static readonly Identifier GET_SONG_LIST = _();
     public static readonly Identifier GET_SOUND_SETTING = _();
+    public static readonly Identifier GET_USER_SONG_DISCS = _();
     public static readonly Identifier GOAWAY = _();
     public static readonly Identifier GOTOFLAT = _();
     public static readonly Identifier GOVIADOOR = _();
@@ -121,8 +131,10 @@ public static class Out {
     public static readonly Identifier INITIATECREATEGAME = _();
     public static readonly Identifier INITIATEJOINGAME = _();
     public static readonly Identifier INIT_CRYPTO = _();
+    public static readonly Identifier INSERT_SOUND_PACKAGE = _();
     public static readonly Identifier INTODOOR = _();
     public static readonly Identifier JOINPARAMETERVALUES = _();
+    public static readonly Identifier JUKEBOX_PLAYLIST_ADD = _();
     public static readonly Identifier JUMPPERF = _();
     public static readonly Identifier JUMPSTART = _();
     public static readonly Identifier KICKPLAYER = _();
@@ -144,8 +156,11 @@ public static class Out {
     public static readonly Identifier MOVE = _();
     public static readonly Identifier MOVEITEM = _();
     public static readonly Identifier MOVESTUFF = _();
+    public static readonly Identifier MSG_ACCEPT_TUTOR_INVITATION = _();
     public static readonly Identifier MSG_PLAYER_INPUT = _();
+    public static readonly Identifier MSG_REJECT_TUTOR_INVITATION = _();
     public static readonly Identifier NAVIGATE = _();
+    public static readonly Identifier NEW_SONG = _();
     public static readonly Identifier OBSERVEINSTANCE = _();
     public static readonly Identifier PARENT_EMAIL_REQUIRED = _();
     public static readonly Identifier PICK_CRYFORHELP = _();
@@ -168,10 +183,14 @@ public static class Out {
     public static readonly Identifier REMOVEITEM = _();
     public static readonly Identifier REMOVERIGHTS = _();
     public static readonly Identifier REMOVESTUFF = _();
+    public static readonly Identifier REMOVE_JUKEBOX_DISC = _();
     public static readonly Identifier REQUESTFULLSTATUSUPDATE = _();
     public static readonly Identifier REQUESTFULLSTATUSUPDATE_2 = _();
+    public static readonly Identifier RESET_JUKEBOX = _();
     public static readonly Identifier RESPECT_USER = _();
     public static readonly Identifier ROOMBAN = _();
+    public static readonly Identifier SAVE_SONG_EDIT = _();
+    public static readonly Identifier SAVE_SONG_NEW = _();
     public static readonly Identifier SBUSYF = _();
     public static readonly Identifier SCR_BUY = _();
     public static readonly Identifier SCR_GET_USER_INFO = _();
@@ -181,10 +200,12 @@ public static class Out {
     public static readonly Identifier SETFLATCAT = _();
     public static readonly Identifier SETFLATINFO = _();
     public static readonly Identifier SETITEMDATA = _();
+    public static readonly Identifier SETITEMSTATE = _();
     public static readonly Identifier SETSTUFFDATA = _();
     public static readonly Identifier SET_SOUND_SETTING = _();
     public static readonly Identifier SHOUT = _();
     public static readonly Identifier SIGN = _();
+    public static readonly Identifier SONG_EDIT_CLOSE = _();
     public static readonly Identifier SPLASH_POSITION = _();
     public static readonly Identifier SRCHF = _();
     public static readonly Identifier STARTGAME = _();
@@ -207,6 +228,7 @@ public static class Out {
     public static readonly Identifier UPDATE = _();
     public static readonly Identifier UPDATEFLAT = _();
     public static readonly Identifier UPDATE_ACCOUNT = _();
+    public static readonly Identifier UPDATE_PLAY_LIST = _();
     public static readonly Identifier USEITEM = _();
     public static readonly Identifier USE_AVATAR_EFFECT = _();
     public static readonly Identifier VALIDATE_PARENT_EMAIL = _();
