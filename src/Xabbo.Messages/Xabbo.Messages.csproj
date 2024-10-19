@@ -12,7 +12,7 @@
 
   <PropertyGroup Label="Package">
     <PackageId>Xabbo.Messages</PackageId>
-    <PackageProjectUrl>https://xabbo.b7c.io/messages</PackageProjectUrl>
+    <PackageProjectUrl>https://xabbo.io</PackageProjectUrl>
     <Description>Provides message identifiers for use with Xabbo.</Description>
     <RepositoryUrl>https://github.com/xabbo/messages.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
