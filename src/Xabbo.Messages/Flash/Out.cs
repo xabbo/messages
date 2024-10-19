@@ -1,11 +1,11 @@
-// Generated for the Flash client version WIN63-202410132312-548085391 from the Sulek API (https://sulek.dev/).
+// Generated for the Flash client version WIN63-202410181415-666068292 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Flash;
 
 /// <summary>
-/// Generated for the Flash client version WIN63-202410132312-548085391 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Flash client version WIN63-202410181415-666068292 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class Out {
     private static Identifier _([CallerMemberName]string? name = null)
