@@ -4,13 +4,16 @@ version: '3'
 
 tasks:
   init:
+    desc: Initialize githooks
     cmds:
       - git config --local core.hooksPath .githooks/
   generate:
+    desc: Generate identifiers for Xabbo.Messages
     dir: ./src/Xabbo.Messages
     cmds:
       - ./generate.sh
   test:cli:
+    desc: Runs the CLI app tests
     cmds:
       - go test ./cli/...
   test:lib:
@@ -18,8 +21,10 @@ tasks:
     cmds:
       - dotnet test --no-build
   test:
+    desc: Runs all tests
     deps: [test:cli, test:lib]
   build:cli:
+    desc: Builds the CLI app
     cmds:
       - go build -v -o ./bin/ ./cli/msgs
   build:lib:
@@ -28,10 +33,12 @@ tasks:
   build:
     deps: [build:cli, build:lib]
   rebuild:
+    desc: Rebuilds the solution
     cmds:
       - dotnet clean
       - dotnet build-server shutdown
       - dotnet build
   pack:
+    desc: Packs Xabbo.Messages into a nupkg
     cmds:
       - dotnet pack src/Xabbo.Messages -c Release -o pkg
