@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 42 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 95 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 42 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 95 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class In {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -16,6 +16,7 @@ public static class In {
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
+    public static readonly Identifier ACCOUNT_PREFERENCES = _();
     public static readonly Identifier ACR = _();
     public static readonly Identifier ACTIVEOBJECTS = _();
     public static readonly Identifier ACTIVEOBJECT_ADD = _();
@@ -25,6 +26,7 @@ public static class In {
     public static readonly Identifier ADD_BUDDY = _();
     public static readonly Identifier ALIAS_LIST = _();
     public static readonly Identifier APPROVENAMEREPLY = _();
+    public static readonly Identifier APPROVE_RECYCLING_RESULT = _();
     public static readonly Identifier ARENA_ENTERED = _();
     public static readonly Identifier AVAILABLESETS = _();
     public static readonly Identifier AVAILABLE_BADGES = _();
@@ -34,6 +36,7 @@ public static class In {
     public static readonly Identifier AVATAR_EFFECT_EXPIRED = _();
     public static readonly Identifier AVATAR_EFFECT_SELECTED = _();
     public static readonly Identifier BUDDYLIST = _();
+    public static readonly Identifier BUS_DOOR = _();
     public static readonly Identifier CALL_FOR_HELP_CATEGORIES = _();
     public static readonly Identifier CAMPAIGN_MESSAGE = _();
     public static readonly Identifier CANNOT_ENTER_BUS = _();
@@ -48,6 +51,7 @@ public static class In {
     public static readonly Identifier CHECK_SUM = _();
     public static readonly Identifier CLC = _();
     public static readonly Identifier CLOSE_UIMAKOPPI = _();
+    public static readonly Identifier CONFIRM_RECYCLING_RESULT = _();
     public static readonly Identifier COPPA_CHECKTIME = _();
     public static readonly Identifier COPPA_GETREALTIME = _();
     public static readonly Identifier CREATE_GAME_INFO = _();
@@ -57,6 +61,7 @@ public static class In {
     public static readonly Identifier DATE = _();
     public static readonly Identifier DELETE_CRY = _();
     public static readonly Identifier DICE_VALUE = _();
+    public static readonly Identifier DIMMER_PRESETS = _();
     public static readonly Identifier DIRECTORY_STATUS = _();
     public static readonly Identifier DOORBELL_RINGING = _();
     public static readonly Identifier DOORDELETED = _();
@@ -106,6 +111,8 @@ public static class In {
     public static readonly Identifier HELLO = _();
     public static readonly Identifier HOTEL_LOGOUT = _();
     public static readonly Identifier IDATA = _();
+    public static readonly Identifier IGNORE_LIST = _();
+    public static readonly Identifier IGNORE_USER_RESULT = _();
     public static readonly Identifier INTERSTITIALDATA = _();
     public static readonly Identifier INVALID_SONG_LENGTH = _();
     public static readonly Identifier INVALID_SONG_NAME = _();
@@ -176,7 +183,7 @@ public static class In {
     public static readonly Identifier PURCHASE_OK = _();
     public static readonly Identifier PURSE = _();
     public static readonly Identifier PURSE_2 = _();
-    public static readonly Identifier RECYCLER_FINISHED = _();
+    public static readonly Identifier RECYCLER_CONFIGURATION = _();
     public static readonly Identifier RECYCLER_PRIZES = _();
     public static readonly Identifier RECYCLER_STATUS = _();
     public static readonly Identifier REFRESH_CATALOGUE = _();
@@ -188,6 +195,7 @@ public static class In {
     public static readonly Identifier RESPECT_NOTIFICATION = _();
     public static readonly Identifier RIGHTS = _();
     public static readonly Identifier ROOMAD = _();
+    public static readonly Identifier ROOMFORWARD = _();
     public static readonly Identifier ROOMQUEUEDATA = _();
     public static readonly Identifier ROOM_READY = _();
     public static readonly Identifier ROOM_RIGHTS = _();
@@ -204,13 +212,13 @@ public static class In {
     public static readonly Identifier SONG_LOCKED = _();
     public static readonly Identifier SONG_MISSING_PACKAGES = _();
     public static readonly Identifier SONG_SAVED = _();
-    public static readonly Identifier SOUND_SETTING = _();
     public static readonly Identifier SPACENODEUSERS = _();
     public static readonly Identifier STAGE_ENDING = _();
     public static readonly Identifier STAGE_RUNNING = _();
     public static readonly Identifier STAGE_STARTING = _();
     public static readonly Identifier STAGE_STILL_LOADING = _();
     public static readonly Identifier START_FAILED = _();
+    public static readonly Identifier START_RECYCLING_RESULT = _();
     public static readonly Identifier STATUS = _();
     public static readonly Identifier STRIPINFO = _();
     public static readonly Identifier STRIPINFO_2 = _();
@@ -223,10 +231,12 @@ public static class In {
     public static readonly Identifier TICKETSBUY = _();
     public static readonly Identifier TOTP_EMAIL_VERIFICATION_REQUIRED = _();
     public static readonly Identifier TRADE_ACCEPT = _();
+    public static readonly Identifier TRADE_ALREADY_OPEN = _();
     public static readonly Identifier TRADE_CLOSE = _();
     public static readonly Identifier TRADE_COMPLETED = _();
-    public static readonly Identifier TRADE_COMPLETED_2 = _();
+    public static readonly Identifier TRADE_CONFIRM = _();
     public static readonly Identifier TRADE_ITEMS = _();
+    public static readonly Identifier TRADE_OPEN = _();
     public static readonly Identifier UPDATEITEM = _();
     public static readonly Identifier UPDATEOK = _();
     public static readonly Identifier UPDATE_ACCOUNT = _();
@@ -234,6 +244,7 @@ public static class In {
     public static readonly Identifier USERBADGE = _();
     public static readonly Identifier USERFLATCATS = _();
     public static readonly Identifier USERS = _();
+    public static readonly Identifier USERS_BANNED_FROM_ROOM = _();
     public static readonly Identifier USER_BANNED = _();
     public static readonly Identifier USER_JOINED_GAME = _();
     public static readonly Identifier USER_LEFT_GAME = _();

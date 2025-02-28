@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 42 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 95 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 42 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 95 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class Out {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -24,6 +24,7 @@ public static class Out {
     public static readonly Identifier APPROVEEMAIL = _();
     public static readonly Identifier APPROVE_PASSWORD = _();
     public static readonly Identifier APPROVE_PET_NAME = _();
+    public static readonly Identifier APPROVE_RECYCLED_FURNI = _();
     public static readonly Identifier ASSIGNRIGHTS = _();
     public static readonly Identifier BTCKS = _();
     public static readonly Identifier BURN_SONG = _();
@@ -34,6 +35,7 @@ public static class Out {
     public static readonly Identifier CHAT = _();
     public static readonly Identifier CLOSE_CALL = _();
     public static readonly Identifier CLOSE_UIMAKOPPI = _();
+    public static readonly Identifier CONFIRM_FURNI_RECYCLING = _();
     public static readonly Identifier COPPA_REG_CHECKTIME = _();
     public static readonly Identifier COPPA_REG_GETREALTIME = _();
     public static readonly Identifier CREATECALLWITHREPORTING = _();
@@ -79,22 +81,25 @@ public static class Out {
     public static readonly Identifier GETSTRIP = _();
     public static readonly Identifier GETUSERCREDITLOG = _();
     public static readonly Identifier GETUSERFLATCATS = _();
+    public static readonly Identifier GET_ACCOUNT_PREFERENCES = _();
     public static readonly Identifier GET_ALIAS_LIST = _();
+    public static readonly Identifier GET_BANNED_ROOM_USERS = _();
     public static readonly Identifier GET_CATALOG_INDEX = _();
     public static readonly Identifier GET_CATALOG_PAGE = _();
     public static readonly Identifier GET_CFH_CATEGORIES = _();
     public static readonly Identifier GET_CREDITS = _();
+    public static readonly Identifier GET_FURNI_RECYCLER_CONFIGURATION = _();
+    public static readonly Identifier GET_FURNI_RECYCLER_STATUS = _();
     public static readonly Identifier GET_FURNI_REVISIONS = _();
+    public static readonly Identifier GET_IGNORE_LIST = _();
     public static readonly Identifier GET_JUKEBOX_DISCS = _();
     public static readonly Identifier GET_PASSWORD = _();
     public static readonly Identifier GET_PENDING_CALLS_FOR_HELP = _();
     public static readonly Identifier GET_PLAY_LIST = _();
     public static readonly Identifier GET_RECYCLER_PRIZES = _();
-    public static readonly Identifier GET_RECYCLER_STATUS = _();
     public static readonly Identifier GET_SESSION_PARAMETERS = _();
     public static readonly Identifier GET_SONG_INFO = _();
     public static readonly Identifier GET_SONG_LIST = _();
-    public static readonly Identifier GET_SOUND_SETTING = _();
     public static readonly Identifier GET_USER_SONG_DISCS = _();
     public static readonly Identifier GOAWAY = _();
     public static readonly Identifier GOTOFLAT = _();
@@ -105,6 +110,7 @@ public static class Out {
     public static readonly Identifier G_OBJS = _();
     public static readonly Identifier G_STAT = _();
     public static readonly Identifier G_USRS = _();
+    public static readonly Identifier IGNOREUSER = _();
     public static readonly Identifier IG_ACCEPT_INVITE_REQUEST = _();
     public static readonly Identifier IG_CANCEL_GAME = _();
     public static readonly Identifier IG_CHANGE_PARAMETERS = _();
@@ -159,11 +165,15 @@ public static class Out {
     public static readonly Identifier MSG_ACCEPT_TUTOR_INVITATION = _();
     public static readonly Identifier MSG_PLAYER_INPUT = _();
     public static readonly Identifier MSG_REJECT_TUTOR_INVITATION = _();
+    public static readonly Identifier MSG_ROOMDIMMER_CHANGE_STATE = _();
+    public static readonly Identifier MSG_ROOMDIMMER_GET_PRESETS = _();
+    public static readonly Identifier MSG_ROOMDIMMER_SET_PRESET = _();
     public static readonly Identifier NAVIGATE = _();
     public static readonly Identifier NEW_SONG = _();
     public static readonly Identifier OBSERVEINSTANCE = _();
     public static readonly Identifier PARENT_EMAIL_REQUIRED = _();
     public static readonly Identifier PICK_CRYFORHELP = _();
+    public static readonly Identifier PLACEITEM = _();
     public static readonly Identifier PLACESTUFF = _();
     public static readonly Identifier POLL_ANSWER = _();
     public static readonly Identifier POLL_REJECT = _();
@@ -174,7 +184,6 @@ public static class Out {
     public static readonly Identifier PURCHASE_AND_WEAR = _();
     public static readonly Identifier PURCHASE_FROM_CATALOG = _();
     public static readonly Identifier QUIT = _();
-    public static readonly Identifier RECYCLE_ITEMS = _();
     public static readonly Identifier REDEEM_VOUCHER = _();
     public static readonly Identifier REFRESHFIGURE = _();
     public static readonly Identifier REGISTER = _();
@@ -209,6 +218,7 @@ public static class Out {
     public static readonly Identifier SPLASH_POSITION = _();
     public static readonly Identifier SRCHF = _();
     public static readonly Identifier STARTGAME = _();
+    public static readonly Identifier START_FURNI_RECYCLING = _();
     public static readonly Identifier STOP = _();
     public static readonly Identifier SUBMIT_GDPR_REQUEST = _();
     public static readonly Identifier SUSERF = _();
@@ -218,11 +228,16 @@ public static class Out {
     public static readonly Identifier TRADE_ACCEPT = _();
     public static readonly Identifier TRADE_ADDITEM = _();
     public static readonly Identifier TRADE_CLOSE = _();
+    public static readonly Identifier TRADE_CONFIRM_ACCEPT = _();
+    public static readonly Identifier TRADE_CONFIRM_DECLINE = _();
     public static readonly Identifier TRADE_OPEN = _();
+    public static readonly Identifier TRADE_REMOVE_ITEM = _();
     public static readonly Identifier TRADE_UNACCEPT = _();
     public static readonly Identifier TRYBUS = _();
     public static readonly Identifier TRYFLAT = _();
     public static readonly Identifier TRY_LOGIN = _();
+    public static readonly Identifier UNBAN_ROOM_USER = _();
+    public static readonly Identifier UNIGNORE_USER = _();
     public static readonly Identifier UNIQUEID = _();
     public static readonly Identifier UNOBSERVEINSTANCE = _();
     public static readonly Identifier UPDATE = _();
