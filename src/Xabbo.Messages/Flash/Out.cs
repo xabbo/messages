@@ -1,11 +1,11 @@
-// Generated for the Flash client version WIN63-202502191617-590633534 from the Sulek API (https://sulek.dev/).
+// Generated for the Flash client version WIN63-202504171200-169586654 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Flash;
 
 /// <summary>
-/// Generated for the Flash client version WIN63-202502191617-590633534 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Flash client version WIN63-202504171200-169586654 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class Out {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -69,6 +69,7 @@ public static class Out {
     public static readonly Identifier ChatReviewSessionCreate = _();
     public static readonly Identifier CheckUserName = _();
     public static readonly Identifier ClaimDailyTask = _();
+    public static readonly Identifier ClaimNftClaims = _();
     public static readonly Identifier ClickFurni = _();
     public static readonly Identifier ClientHello = _();
     public static readonly Identifier CloseIssueDefaultAction = _();
@@ -214,8 +215,10 @@ public static class Out {
     public static readonly Identifier GetModeratorRoomInfo = _();
     public static readonly Identifier GetModeratorUserInfo = _();
     public static readonly Identifier GetNextTargetedOffer = _();
+    public static readonly Identifier GetNftClaims = _();
     public static readonly Identifier GetNftCollections = _();
     public static readonly Identifier GetNftCredits = _();
+    public static readonly Identifier GetNftStoreOffers = _();
     public static readonly Identifier GetNftTradeInventory = _();
     public static readonly Identifier GetNftTransferFee = _();
     public static readonly Identifier GetNowPlaying = _();
@@ -337,6 +340,7 @@ public static class Out {
     public static readonly Identifier NewUserExperienceScriptProceed = _();
     public static readonly Identifier NftCollectiblesClaimBonusItem = _();
     public static readonly Identifier NftCollectiblesClaimRewardItem = _();
+    public static readonly Identifier NftStorePurchase = _();
     public static readonly Identifier NftTransferAssets = _();
     public static readonly Identifier Open = _();
     public static readonly Identifier OpenCampaignCalendarDoor = _();

@@ -1,11 +1,11 @@
-// Generated for the Flash client version WIN63-202502191617-590633534 from the Sulek API (https://sulek.dev/).
+// Generated for the Flash client version WIN63-202504171200-169586654 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Flash;
 
 /// <summary>
-/// Generated for the Flash client version WIN63-202502191617-590633534 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Flash client version WIN63-202504171200-169586654 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class In {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -320,10 +320,14 @@ public static class In {
     public static readonly Identifier NewUserExperienceGiftOffer = _();
     public static readonly Identifier NewUserExperienceNotComplete = _();
     public static readonly Identifier NftBonusItemClaimResult = _();
+    public static readonly Identifier NftClaimResult = _();
+    public static readonly Identifier NftClaims = _();
     public static readonly Identifier NftCollections = _();
     public static readonly Identifier NftCollectionsScore = _();
     public static readonly Identifier NftEmeraldConvertResult = _();
     public static readonly Identifier NftRewardItemClaimResult = _();
+    public static readonly Identifier NftStoreOffers = _();
+    public static readonly Identifier NftStorePurchase = _();
     public static readonly Identifier NftTransferAssetsResult = _();
     public static readonly Identifier NftTransferFee = _();
     public static readonly Identifier NoOwnedRoomsAlert = _();
@@ -484,6 +488,8 @@ public static class In {
     public static readonly Identifier UserNftWardrobe = _();
     public static readonly Identifier UserNftWardrobeSelection = _();
     public static readonly Identifier UserObject = _();
+    public static readonly Identifier UserPurchasableChatStyleChanged = _();
+    public static readonly Identifier UserPurchasableChatStyles = _();
     public static readonly Identifier UserRemove = _();
     public static readonly Identifier UserRights = _();
     public static readonly Identifier UserSongDisksInventory = _();
@@ -525,6 +531,7 @@ public static class In {
     public static readonly Identifier YoutubeControlVideo = _();
     public static readonly Identifier YoutubeDisplayPlaylists = _();
     public static readonly Identifier YoutubeDisplayVideo = _();
+    public static readonly Identifier _-a4 = _();
 
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }
