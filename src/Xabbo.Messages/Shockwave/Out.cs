@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 95 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 116 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 95 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 116 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class Out {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -33,6 +33,8 @@ public static class Out {
     public static readonly Identifier CHANGESHRT = _();
     public static readonly Identifier CHANGEWORLD = _();
     public static readonly Identifier CHAT = _();
+    public static readonly Identifier CLAIM_COMMUNITY_GOAL_REWARD = _();
+    public static readonly Identifier CLAIM_DAILY_TASK = _();
     public static readonly Identifier CLOSE_CALL = _();
     public static readonly Identifier CLOSE_UIMAKOPPI = _();
     public static readonly Identifier CONFIRM_FURNI_RECYCLING = _();
@@ -87,7 +89,9 @@ public static class Out {
     public static readonly Identifier GET_CATALOG_INDEX = _();
     public static readonly Identifier GET_CATALOG_PAGE = _();
     public static readonly Identifier GET_CFH_CATEGORIES = _();
+    public static readonly Identifier GET_COMMUNITY_CHALLENGE_PROGRESS = _();
     public static readonly Identifier GET_CREDITS = _();
+    public static readonly Identifier GET_DAILY_TASKS = _();
     public static readonly Identifier GET_FURNI_RECYCLER_CONFIGURATION = _();
     public static readonly Identifier GET_FURNI_RECYCLER_STATUS = _();
     public static readonly Identifier GET_FURNI_REVISIONS = _();
@@ -182,6 +186,7 @@ public static class Out {
     public static readonly Identifier PRESENTOPEN = _();
     public static readonly Identifier PTM = _();
     public static readonly Identifier PURCHASE_AND_WEAR = _();
+    public static readonly Identifier PURCHASE_CLOTHING = _();
     public static readonly Identifier PURCHASE_FROM_CATALOG = _();
     public static readonly Identifier QUIT = _();
     public static readonly Identifier REDEEM_VOUCHER = _();

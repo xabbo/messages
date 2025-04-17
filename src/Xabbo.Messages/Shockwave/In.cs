@@ -1,11 +1,11 @@
-// Generated for the Shockwave client version 95 from the Sulek API (https://sulek.dev/).
+// Generated for the Shockwave client version 116 from the Sulek API (https://sulek.dev/).
 
 using System.Runtime.CompilerServices;
 
 namespace Xabbo.Messages.Shockwave;
 
 /// <summary>
-/// Generated for the Shockwave client version 95 from the <a href="https://sulek.dev/">Sulek API</a>.
+/// Generated for the Shockwave client version 116 from the <a href="https://sulek.dev/">Sulek API</a>.
 /// </summary>
 public static class In {
     private static Identifier _([CallerMemberName]string? name = null)
@@ -51,6 +51,7 @@ public static class In {
     public static readonly Identifier CHECK_SUM = _();
     public static readonly Identifier CLC = _();
     public static readonly Identifier CLOSE_UIMAKOPPI = _();
+    public static readonly Identifier COMMUNITY_GOAL_PROGRESS = _();
     public static readonly Identifier CONFIRM_RECYCLING_RESULT = _();
     public static readonly Identifier COPPA_CHECKTIME = _();
     public static readonly Identifier COPPA_GETREALTIME = _();
@@ -58,6 +59,8 @@ public static class In {
     public static readonly Identifier CRYFORHELP = _();
     public static readonly Identifier CRYPTO_PARAMETERS = _();
     public static readonly Identifier CRY_REPLY = _();
+    public static readonly Identifier DAILY_TASKS = _();
+    public static readonly Identifier DAILY_TASK_UPDATED = _();
     public static readonly Identifier DATE = _();
     public static readonly Identifier DELETE_CRY = _();
     public static readonly Identifier DICE_VALUE = _();
@@ -78,6 +81,7 @@ public static class In {
     public static readonly Identifier ERROR = _();
     public static readonly Identifier FAILURE = _();
     public static readonly Identifier FAVOURITEROOMRESULTS = _();
+    public static readonly Identifier FIGURE_CHANGE = _();
     public static readonly Identifier FLATCAT = _();
     public static readonly Identifier FLATINFO = _();
     public static readonly Identifier FLATNOTALLOWEDTOENTER = _();
@@ -217,6 +221,7 @@ public static class In {
     public static readonly Identifier STAGE_RUNNING = _();
     public static readonly Identifier STAGE_STARTING = _();
     public static readonly Identifier STAGE_STILL_LOADING = _();
+    public static readonly Identifier STAMP_BALANCE = _();
     public static readonly Identifier START_FAILED = _();
     public static readonly Identifier START_RECYCLING_RESULT = _();
     public static readonly Identifier STATUS = _();
